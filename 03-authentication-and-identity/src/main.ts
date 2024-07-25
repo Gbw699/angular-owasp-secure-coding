@@ -12,10 +12,10 @@ bootstrapApplication(AppComponent, {
     providers: [
         importProvidersFrom(BrowserModule, AuthModule.forRoot({
             config: {
-                authority: 'your issuer', // Enter Issuer
+                authority: 'http://localhost:8080/realms/angular-owasp-secure-coding', // Enter Issuer
                 redirectUrl: `${window.location.origin}`,
                 postLogoutRedirectUri: window.location.origin,
-                clientId: 'your client id', // Enter ClientID
+                clientId: 'myclient', // Enter ClientID
                 scope: 'openid profile offline_access',
                 responseType: 'code',
                 silentRenew: true,
